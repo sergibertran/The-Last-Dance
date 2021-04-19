@@ -40,7 +40,16 @@
       <div class="header-overlay"></div>
       <div class="header-content container">
         <h1 class="logo">The Front<span>ender</span></h1>
-        <p class="tagline">Enfréntate a tus bugs</p>
+        <canvas id="canvas"></canvas>
+        <script src="https://unpkg.com/rive-js@0.7.6/dist/rive.min.js"></script>
+        <script>
+          // autoplays the first animation in the default artboard
+          new rive.Rive({
+            src: 'https://public.rive.app/community/runtime-files/5-12-rope.riv',
+            canvas: document.getElementById('canvas'),
+            autoplay: true,
+          })
+        </script>
         <p class="promo-text">
           Adéntrate en un mundo lleno de pixeles, lintings y protocolos que te
           acechan tras cada línea de código. ¿Te atreves?
